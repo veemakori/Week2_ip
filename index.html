@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,22 +9,34 @@
     <link rel="stylesheet" href="assets/css/main.css">
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <title>Week2 Project</title>
-    
+
 </head>
+
 <body>
     <div class="data-container">
         <div class="left-container">
             <h1>Learn your Akan Name according to Ghanian Culture</h1>
-            <div class = "culture">
-              <img class="img" src="images/pic.jpeg">
+            <div class="culture">
+                <img class="img" src="images/pic.jpeg">
             </div>
-          </div>
-          <div class ="right-container">
-            <form name="user_form"class="form-inline">
-              <div class="form-group">
-                <label>DOB:</label>
-                <input id="user_DOB" name="user_DOB" type="text"required placeholder="DD/MM/YYYY">
-              </div>
+        </div>
+        <div class="right-container">
+            <form name="user_form" class="form-inline">
+                <div class="form-group">
+                    <label>DOB:</label>
+                    <input id="user_DOB" name="user_DOB" type="text" required placeholder="DD/MM/YYYY">
+                    <label>Gender:</label>
+                    <select class="form-control" id="gender" name="gender">
+                        <option>Male</option>
+                        <option>Female</option>
+                    </select>
+                    <div>
+                        <input id="submit" type="submit" value="Submit" onclick="return user_Action()">
+                    </div>
+                </div>
+            </form>
+        </div>
     </div>
 </body>
+
 </html>
