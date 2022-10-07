@@ -29,3 +29,8 @@ function user_Action(){
 				form.dob.focus();
 				return false;
 			}
+
+
+            function century(CC){
+                return((CC / 4) - 2 * CC - 1);
+            }
