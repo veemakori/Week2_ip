@@ -38,3 +38,20 @@ function user_Action(){
             function year(YY){
                 return(5 * YY / 4);
             }
+
+            function month (MM){
+                return(26 * (MM + 1) / 10);
+            }
+        
+            // this function splits the century of that year entered
+            function centuryFromYear(year) {
+                return Math.ceil(year/100)
+            }
+            
+            var enterCentury  = centuryFromYear(regs[3]) 
+            var enterYear  = regs[3]
+            var enterMonth  = regs[2]
+            var enterDate  = regs[1]
+            var gender = document.getElementById('gender').value // picks the genter entered in the dropdown 
+            //Century = enterYear.substr(0,2); // picks the century
+            Year = enterYear.substr(2,2); // picks the year 
