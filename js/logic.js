@@ -54,4 +54,27 @@ function user_Action(){
             var enterDate  = regs[1]
             var gender = document.getElementById('gender').value // picks the genter entered in the dropdown 
             //Century = enterYear.substr(0,2); // picks the century
-            Year = enterYear.substr(2,2); // picks the year 
+            Year = enterYear.substr(2,2); // picks the year
+
+            alert('You were born in the ' + Year + ' year of the ' + enterCentury + ' Century')
+    
+
+            const birthCentury = century(enterCentury)
+            const birthYear = year(Year)
+            const birthMonth = month(enterMonth)
+        
+            var calculationResults = (birthCentury + birthYear + birthMonth + enterDate) % 7
+            const wholeNumber = calculationResults.toPrecision(1);
+            //alert(wholeNumber)
+            var result;
+            if (gender == "Male"){
+                result = maleNames[wholeNumber]
+                
+            }else if (gender == "Female"){
+                result = femaleNames[wholeNumber]
+            }else{
+            }
+            alert('And So Your Akana  day name is :' + result)
+            return true;
+        }
+        }
