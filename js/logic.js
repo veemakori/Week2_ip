@@ -24,3 +24,8 @@ function user_Action(){
 					user_form.user_DOB.focus();
 					return false;
 				}
+            } else {
+				alert("Invalid date format use dd/mm/yyyy: " + user_form.user_DOB.value);
+				form.dob.focus();
+				return false;
+			}
